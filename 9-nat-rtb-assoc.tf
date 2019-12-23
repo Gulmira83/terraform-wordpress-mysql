@@ -7,6 +7,6 @@ resource "aws_route_table_association" "priv-2" {
   subnet_id      = aws_subnet.priv-2.id
 }
 resource "aws_route_table_association" "priv-3" {
-  route_table_id = aws_vpc.vpc-ohio.aws_route_table.nat-rtb.id
+  route_table_id = aws_route_table.nat-rtb.id
   subnet_id      = aws_subnet.priv-3.id
 }
