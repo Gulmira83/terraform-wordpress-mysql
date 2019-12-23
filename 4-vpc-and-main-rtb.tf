@@ -6,7 +6,7 @@ resource "aws_internet_gateway" "igw-ohio" {
   vpc_id = aws_vpc.vpc-ohio.id
 }
 
-resource "aws_route" "pub_rtb" {
+resource "aws_route" "pub_route" {
   route_table_id         = aws_vpc.vpc-ohio.main_route_table_id
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = aws_internet_gateway.igw-ohio.id

@@ -1,4 +1,4 @@
-resource "aws_route_table" "r" {
+resource "aws_route_table" "nat-rtb" {
   vpc_id = aws_vpc.vpc-ohio.id
 
   route {
