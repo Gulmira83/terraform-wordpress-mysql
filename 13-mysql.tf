@@ -4,6 +4,7 @@ resource "aws_instance" "mysql" {
   subnet_id = aws_subnet.priv-1.id
   associate_public_ip_address = "false"
   key_name = aws_key_pair.deployer.key_name
-  //security_groups = ["db"]
-  //depends_on = [aws_security_group.db]
+  vpc_security_group_ids = aws_security_group.db.id
+  depends_on = [aws_security_group.db]
+  user_data = file("db-userdata")
 }

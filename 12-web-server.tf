@@ -4,9 +4,9 @@ resource "aws_instance" "web" {
   subnet_id = aws_subnet.pub-2.id
   associate_public_ip_address = var.associate_public_ip_address
   key_name = aws_key_pair.deployer.key_name
-  security_groups = ["web"]
-  //depends_on = [aws_security_group.web]
-  //user_data = file("web-userdata")
+  security_groups = aws_security_group.web.id
+  depends_on = [aws_security_group.web]
+  user_data = file("web-userdata")
 
 
 }
