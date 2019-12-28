@@ -1,4 +1,4 @@
-resource "aws_instance" "bastion2" {
+resource "aws_instance" "bastion2d" {
   ami             = var.ami
   instance_type   = var.instance_type
   subnet_id = aws_subnet.pub-1.id
