@@ -19,8 +19,8 @@ resource "aws_security_group" "ssh" {
 } 
 
 resource "aws_security_group" "web" { 
-  name        = "ssh" 
-  description = "Allow SSH inbound traffic" 
+  name        = "web" 
+  description = "Allow web inbound traffic" 
   vpc_id      = aws_vpc.vpc-ohio.id
 
   ingress { 
@@ -28,12 +28,18 @@ resource "aws_security_group" "web" {
     to_port     = 80 
     protocol    = "tcp" 
     cidr_blocks = ["0.0.0.0/0"]   
-
 } 
+  egress { 
+    from_port       = 0 
+    to_port         = 0 
+    protocol        = "-1" 
+    cidr_blocks     = ["0.0.0.0/0"] 
+  } 
 }
+
 resource "aws_security_group" "db" { 
-  name        = "ssh" 
-  description = "Allow SSH inbound traffic" 
+  name        = "db" 
+  description = "Allow db inbound traffic" 
   vpc_id      = aws_vpc.vpc-ohio.id
 
   ingress { 
@@ -41,6 +47,11 @@ resource "aws_security_group" "db" {
     to_port     = 3306
     protocol    = "tcp" 
     cidr_blocks = ["0.0.0.0/0"]   
-
 } 
+  egress { 
+    from_port       = 0 
+    to_port         = 0 
+    protocol        = "-1" 
+    cidr_blocks     = ["0.0.0.0/0"] 
+  } 
 }
