@@ -5,7 +5,5 @@ resource "aws_instance" "mysql" {
   associate_public_ip_address = "false"
   key_name = aws_key_pair.deployer.key_name
   security_groups = ["db"]
-  
-
-
+  depends_on = [aws_security_group.db]
 }
