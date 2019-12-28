@@ -5,6 +5,6 @@ resource "aws_instance" "mysql" {
   associate_public_ip_address = "false"
   key_name = aws_key_pair.deployer.key_name
   
-  depends_on = [aws_security_group.db]
+
   //user_data = file("db-userdata")
 }
