@@ -30,6 +30,7 @@ resource "aws_security_group" "web" {
     cidr_blocks = ["0.0.0.0/0"]   
 
 } 
+}
 resource "aws_security_group" "db" { 
   name        = "ssh" 
   description = "Allow SSH inbound traffic" 
@@ -42,3 +43,4 @@ resource "aws_security_group" "db" {
     cidr_blocks = ["0.0.0.0/0"]   
 
 } 
+}
