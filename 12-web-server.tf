@@ -5,8 +5,8 @@ resource "aws_instance" "web" {
   associate_public_ip_address = var.associate_public_ip_address
   key_name = aws_key_pair.deployer.key_name
   security_groups = ["web"]
-  depends_on = [aws_security_group.web]
-  user_data = file("web-userdata")
+  //depends_on = [aws_security_group.web]
+  //user_data = file("web-userdata")
 
 
 }
