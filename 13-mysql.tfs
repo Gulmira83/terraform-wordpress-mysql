@@ -1,7 +1,6 @@
 resource "aws_instance" "mysql" {
   ami             = var.ami
   instance_type   = var.instance_type
-  vpc_id          = aws_vpc.vpc-ohio.id
   subnet_id = aws_subnet.priv-1.id
   associate_public_ip_address = "false"
   key_name = aws_key_pair.deployer.key_name
