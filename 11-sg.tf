@@ -17,3 +17,28 @@ resource "aws_security_group" "ssh" {
     cidr_blocks     = ["0.0.0.0/0"] 
   } 
 } 
+
+resource "aws_security_group" "web" { 
+  name        = "ssh" 
+  description = "Allow SSH inbound traffic" 
+  vpc_id      = aws_vpc.vpc-ohio.id
+
+  ingress { 
+    from_port   = 80
+    to_port     = 80 
+    protocol    = "tcp" 
+    cidr_blocks = ["0.0.0.0/0"]   
+
+} 
+resource "aws_security_group" "db" { 
+  name        = "ssh" 
+  description = "Allow SSH inbound traffic" 
+  vpc_id      = aws_vpc.vpc-ohio.id
+
+  ingress { 
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp" 
+    cidr_blocks = ["0.0.0.0/0"]   
+
+} 
