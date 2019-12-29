@@ -7,6 +7,9 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.web.id]
 
   user_data = file("userdata-web")
-
+  
+  tags = {
+    Name = "Web"
+  }
 
 }

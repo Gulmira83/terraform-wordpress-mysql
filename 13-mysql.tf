@@ -7,4 +7,7 @@ resource "aws_instance" "mysql" {
   vpc_security_group_ids = [aws_security_group.db.id]
 
   user_data = file("userdata-db")
+  tags = {
+    Name = "Database"
+  }
 }
