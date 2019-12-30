@@ -10,3 +10,10 @@ variable "az" {
   default = ["us-east-1a","us-east-1b","us-east-1c"]
 }
 
+variable "ami" {
+  default = "ami-0451ca290c2f877"
+}
+
+variable "instance_type" {
+  default = "t2.micro"
+}
