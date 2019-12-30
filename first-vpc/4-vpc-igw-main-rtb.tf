@@ -1,6 +1,10 @@
 resource "aws_vpc" "vpc-ohio" {
   cidr_block = "192.168.0.0/16"
   enable_dns_hostnames = "true"
+   
+  tags = {
+    Name = "Terraform-Ohio"
+  }
 }
 
 resource "aws_internet_gateway" "igw-ohio" {
