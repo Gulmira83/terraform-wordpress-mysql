@@ -1,4 +1,4 @@
-resource "aws_instance" "bastion" {
+resource "aws_instance" "backup" {
   ami             = var.ami
   instance_type   = var.instance_type
   subnet_id = aws_subnet.priv-1.id
