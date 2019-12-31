@@ -19,7 +19,7 @@ variable "priv-cidr" {
 }
 
 variable "az" {
-  default = ["var.regiona","var.region"b,"var.region"c]
+  default = ["var.region"a,"var.region"b,"var.region"c]
 }
 
 variable "instance_type" {
