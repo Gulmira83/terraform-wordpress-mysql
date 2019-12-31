@@ -19,7 +19,7 @@ variable "priv-cidr" {
 }
 
 variable "az" {
-  default = ["us-east-1a","us-east-1b","us-east-1c"]
+  default = ["us-east-2a","us-east-2b","us-east-2c"]
 }
 
 variable "instance_type" {
