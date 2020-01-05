@@ -37,6 +37,5 @@ variable "ami-centos-7" {
   default = {
     "us-east-1" = "ami-02eac2c0129f6376b"
     "us-east-2" = "ami-0f2b4fc905b0bd1f1"
-    "us-west-1" = "ami-074e2d6769f445be5"
   }
 }
