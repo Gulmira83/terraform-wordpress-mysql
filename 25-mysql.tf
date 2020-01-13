@@ -4,9 +4,9 @@ resource "aws_db_instance" "rds" {
   engine            = "mysql"
   engine_version    = "5.7"
   instance_class    = "db.t2.micro"
-  name              = "mydb"
+  name              = "wordpress"
   username          = "wpuser"
-  password          = "wpuser12345"
+  password          = "wpuser60641"
   parameter_group_name   = "default.mysql5.7"
   db_subnet_group_name   = aws_subnet.priv-1.name
 }
