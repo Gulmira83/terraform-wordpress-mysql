@@ -16,7 +16,7 @@
 
 resource "aws_db_subnet_group" "default" {
   name       = "main"
-  subnet_ids = [aws_subnet.priv-1.id]
+  subnet_ids = [aws_subnet.priv-1.id,aws_subnet.priv-2.id,aws_subnet.priv-3.id]
 
   tags = {
     Name = "My DB subnet group"
