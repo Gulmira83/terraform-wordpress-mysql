@@ -8,5 +8,4 @@ resource "aws_db_instance" "rds" {
   username          = "wpuser"
   password          = "wpuser12345"
   parameter_group_name   = "default.mysql5.7"
-  vpc_security_group_ids = [aws_security_group.db.id,aws_security_group.ssh.id]
 }
