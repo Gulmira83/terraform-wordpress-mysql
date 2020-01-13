@@ -14,9 +14,9 @@ output "web" {
 output "rds-endpoint" {
   value = aws_db_instance.rds.address
 }
-output "rds-endpoint" {
+output "rds-username" {
   value = aws_db_instance.rds.username
 }
-output "rds-endpoint" {
+output "rds-db-name" {
   value = aws_db_instance.rds.name
 }
