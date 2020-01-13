@@ -20,3 +20,7 @@ output "rds-username" {
 output "rds-db-name" {
   value = aws_db_instance.rds.name
 }
+
+output "rds-db-password" {
+  value = aws_db_instance.rds.password
+}
