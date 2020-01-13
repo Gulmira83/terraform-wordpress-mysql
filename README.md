@@ -1,7 +1,7 @@
 # terraform-wordpress
 fully working wordpress with aws rds mysql installed by terraform
 
-### it will create following;
+#### it will create following;
 
 * vpc
 * subnets
@@ -13,4 +13,4 @@ fully working wordpress with aws rds mysql installed by terraform
 * web server
 * aws mysql rds
 
-# then it will output web server ip address with required parameters.
+#### then it will output web server ip address with required parameters.
