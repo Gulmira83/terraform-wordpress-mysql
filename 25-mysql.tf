@@ -7,6 +7,6 @@ resource "aws_db_instance" "rds" {
   name              = "mydb"
   username          = "wpuser"
   password          = "wpuser12345"
-  db_subnet_group_name   = aws_subnet.pub-2.id
+  parameter_group_name   = "default.mysql5.7"
   vpc_security_group_ids = [aws_security_group.db.id,aws_security_group.ssh.id]
 }
