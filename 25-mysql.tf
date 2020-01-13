@@ -6,7 +6,7 @@ resource "aws_db_instance" "rds" {
   instance_class    = "db.t2.micro"
   name              = "mydb"
   username          = "wpuser"
-  password          = "wpuser"
+  password          = "wpuser12345"
   db_subnet_group_name   = aws_subnet.pub-2.id
   vpc_security_group_ids = [aws_security_group.db.id,aws_security_group.ssh.id]
 }
