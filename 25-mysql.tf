@@ -8,4 +8,5 @@ resource "aws_db_instance" "rds" {
   username          = "wpuser"
   password          = "wpuser12345"
   parameter_group_name   = "default.mysql5.7"
+  db_subnet_group_name   = aws_subnet.priv-1.name
 }
