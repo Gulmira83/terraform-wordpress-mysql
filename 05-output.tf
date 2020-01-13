@@ -8,8 +8,8 @@ output "rds-endpoint" {
   value = aws_db_instance.rds.address
 }
 output "bastion" {
-  value = aws_db_instance.bastion.public_ip
+  value = aws_instance.bastion.public_ip
 }
 output "web" {
-  value = aws_db_instance.web.public_ip
+  value = aws_instance.web.public_ip
 }
